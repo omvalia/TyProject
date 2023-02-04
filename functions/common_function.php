@@ -32,7 +32,7 @@ function getproducts(){
                         </div>
                         <div class='des'>
                             <h5>$product_title</h5>
-                            <h4>$product_price/-</h4>
+                            <h4>₹$product_price/-</h4>
                             <a class='view_more' href='product_details.php?product_id=$product_id'>View More</a>
                             <a href='index.php?add_to_cart=$product_id'><i class='fa-solid fa-cart-shopping pro_cart'></i></a>
                         </div>

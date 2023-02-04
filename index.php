@@ -15,6 +15,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!--Font Awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <!--CSS Link-->
     <link rel="stylesheet" href="style.css?version=1">
     <!--Google Fonts Link-->
@@ -65,25 +66,6 @@ session_start();
         <div class="product-boxes">
             <?php getproducts();?>
         </div>
-    <!--
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./images/apple.jpeg" alt="">
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-shirts</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <h4>$500</h4>
-                    </div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-            </div>
-        </div>
-    -->  
     </section>
 
         <!-- calling cart-->
@@ -94,10 +76,29 @@ session_start();
     <section id="banner" class="section-m1">
         <h4>More Products</h4>
         <h2>Explore More about our product with<span> 70% off</span> - All New Designs </h2>
-        <button><a href="display_all.php" class="normal">Explore</a></button>
+        <button><a href="display_all.php" class="normal">Explore More</a></button>
     </section>
 
+    <section id="product1">
+        <div class="pro_head">
+            <h2>New Arrivals</h2>
+            <p>Summer Collection New Mordern Design</p>
+        </div>
+        <div class="product-boxes">
+            <?php getproducts();?>
+        </div>
+    </section>
 
+    <section id="newsletter" class="section-p1 section-31">
+        <div class="newstext">
+            <h4>Sign Up for Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
 
     <!--last child-->
     <!--include footer-->
