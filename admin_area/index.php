@@ -40,20 +40,13 @@ include('../functions/common_function.php');
 </head>
 <body>
     <!--navbar-->
-    <div class="container-fluid p-0">
-        <!--first-child-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
-            <div class="container-fluid">
-                <img class="logo" src="../images./logos.png" alt="">
-                <nav class="navbar navbar-expand-lg">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Welcome Guest</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </nav>
+    <section id="header">
+        <a href="index.php"><img src="../images/logo3.png" alt="logo" class="logo" ></a>
+        <div>   
+            <ul id="navbar">
+                <li>Welcome Admin</li>
+        </div>
+    </section>
 
         <!--second child-->
         <div class="bg-light">

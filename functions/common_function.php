@@ -11,7 +11,7 @@ function getproducts(){
     {
         if(!isset($_GET['brand'])){
 
-            $select_query="select * from `products` order by rand() limit 0,9";
+            $select_query="select * from `products` order by rand() limit 0,4";
             $result_query=mysqli_query($con,$select_query);
             //$row=mysqli_fetch_assoc($result_query);
             //echo $row['product_title'];
@@ -67,18 +67,19 @@ function get_all_products(){
                 $category_id=$row['category_id'];
                 $brand_id=$row['brand_id'];
                 echo "  
-                <div class='col-md-4 mb-2'>
-                    <div class='card'>
-                        <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
-                        <div class='card-body'>
-                            <h5 class='card-title'>$product_title</h5>
-                            <p class='card-text'>$product_description</p>
-                            <p class='card-text'>$product_price/-</p>
-                            <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to Cart</a>
-                            <a href='#' class='btn btn-secondary'>View More</a>
+                <div class='pro-container'>
+                    <div class='pro'>
+                        <div class='pro-img'>
+                            <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
+                        </div>
+                        <div class='des'>
+                            <h5>$product_title</h5>
+                            <h4>₹$product_price/-</h4>
+                            <a class='view_more' href='product_details.php?product_id=$product_id'>View More</a>
+                            <a href='index.php?add_to_cart=$product_id'><i class='fa-solid fa-cart-shopping pro_cart'></i></a>
                         </div>
                     </div>  
-            </div>
+                </div>
         ";
     }
 }
@@ -115,7 +116,6 @@ function get_unique_categories(){
                 <div class='card-body'>
                
                     <h5 class='card-title'>$product_title</h5>
-                    <p class='card-text'>$product_description</p>
                     <p class='card-text'>$product_price/-</p>
                     <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to Cart</a>
                     <a href='#' class='btn btn-secondary'>View More</a>
@@ -159,7 +159,6 @@ function get_unique_brands(){
                 <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
                 <div class='card-body'>
                     <h5 class='card-title'>$product_title</h5>
-                    <p class='card-text'>$product_description</p>
                     <p class='card-text'>$product_price/-</p>
                     <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to Cart</a>
                     <a href='#' class='btn btn-secondary'>View More</a>
@@ -179,8 +178,8 @@ function getbrands(){
     while($row_data=mysqli_fetch_assoc($result_brands)){
         $brand_name=$row_data['brand_name'];
         $brand_id=$row_data['brand_id'];
-        echo "<li class='nav-item'>
-        <a href='index.php?brand=$brand_id' class='nav-link text-light'>$brand_name</a>
+        echo "<li class='side_nav'>
+        <a href='index.php?brand=$brand_id' class='nav-link'>$brand_name</a>
     </li>";
     }
 }
@@ -198,8 +197,8 @@ function getcategories(){
                 while($row_data=mysqli_fetch_assoc($result_categories)){
                     $categories_title=$row_data['category_title'];
                     $category_id=$row_data['category_id'];
-                    echo "<li class='nav-item'>
-                    <a href='index.php?categories=$category_id' class='nav-link text-light'>$categories_title</a>
+                    echo "<li class='side_nav'>
+                    <a href='index.php?categories=$category_id' class='nav-link'>$categories_title</a>
                 </li>";
                 }
 }
@@ -230,7 +229,6 @@ function search_product(){
                             <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
                             <div class='card-body'>
                                 <h5 class='card-title'>$product_title</h5>
-                                <p class='card-text'>$product_description</p>
                                 <p class='card-text'>$product_price/-</p>
                                 <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to Cart</a>
                                 <a href='#' class='btn btn-secondary'>View More</a>
