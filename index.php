@@ -25,28 +25,9 @@ session_start();
     </style>
 </head>
 <body>
-    <section id="header">
-        <a href="index.php"><img src="./images/logo3.png" alt="logo" class="logo" ></a>
-        <div>   
-            <ul id="navbar">
-                <li><a href="index.php" class="active">Home</a></li>
-                <li><a href="display_all.php">Shop</a></li>
-                <li><a href="index.php">About</a></li>
-                <li><a href="index.php">Contact</a></li>
-                <li>
-                <?php
-                if(!isset($_SESSION['username'])){
-                    echo "<a href='./users_area/user_login.php' id='navbar'>Login</a>";
-                }
-                else{
-                echo"<a href='./users_area/logout.php' id='navbar'>Logout</a>";
-                }
-                ?>
-                </li>
-                <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item()?></sup></i></a></li>
-            </ul>
-        </div>
-    </section>
+    <?php
+       include('./includes/navbar.php');
+    ?>
 
     <section id="hero">
         <h4>Trade-in-offer</h4>
@@ -96,7 +77,7 @@ session_start();
         </div>
         <div class="form">
             <input type="text" placeholder="Your email address">
-            <button class="normal">Sign Up</button>
+            <button class="normal text-light">Sign Up</button>
         </div>
     </section>
 
