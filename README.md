@@ -1,1 +1,1 @@
-"# TyProject" 
+"# TyProject - Home Decor Website" 
