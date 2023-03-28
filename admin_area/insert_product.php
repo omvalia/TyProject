@@ -52,7 +52,7 @@ if(isset($_POST['insert_product'])){
 </head>
 <body class="bg-light">
     <div class="container">
-        <h1 class="text-center mt-3">Insert Products</h1>
+        <h1 class="text-center mt-3" style="color:#088178">Insert Products</h1>
         <!--form-->
         <form action="#" method="post" enctype="multipart/form-data">
             <!--Title-->
@@ -126,7 +126,7 @@ if(isset($_POST['insert_product'])){
             </div>
              <!--Instert Button-->
              <div class="form-outline-mb-4 w-50 m-auto pt-2">
-                <input type="submit" name="insert_product" class="btn btn-info mb-3 px-3" value="Insert Products">
+                <input type="submit" name="insert_product" class="btn update_insert_btn mb-3 px-3" value="Insert Products">
             </div>
         </form>
     </div>

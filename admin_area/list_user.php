@@ -1,6 +1,6 @@
 <h3 class="text-center text-success">All Users</h3>
 <table class="table table-bordered mt-5">
-    <thead class="bg-info">
+    <thead class="update_user">
         <?php
         $get_user="select * from `user_table`";
         $result=mysqli_query($con,$get_user);

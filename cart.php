@@ -28,12 +28,14 @@ include('functions/common_function.php');
     <?php
        include('./includes/navbar.php');
     ?>
-
+     <section id="all_pro_header">
+        <h2>View <span>Your Cart</span></h2>
+    </section>
     <!-- fourth child-->
     <div class="container">
         <div class="row">
             <form action="" method="post">
-            <table class="table table-bordered text-center">
+            <table class="table table-bordered text-center" id="custom_table">
               
                     <!--php code to display dynamic data-->
                     <?php 
@@ -73,15 +75,16 @@ include('functions/common_function.php');
                     <tr>
                         <td><?php echo $product_title?></td>
                         <td><img src="./admin_area/product_images/<?php echo $product_image1?>" alt="<?php echo $product_image1?>" class="cart_image"></td>
-                        <td><input type="text" class="form-input w-50" name="qty"></td>
+                        <td><input type="number" class="form-input w-50" name="qty" value="1"></td>
                         <?php 
                             $get_ip_address = getIPAddress();  //::1
                             if(isset($_POST['update_cart']))
                             {
-                                $quantities=$_POST['qty'];
-                                $update_cart="update `cart_details` set quantity=$quantities where ip_address='$get_ip_address'";
+                                echo "inside this".$_POST['qty'];
+                                $quantity=$_POST['qty'];
+                                $update_cart="update `cart_details` set quantity=$quantity where ip_address='$get_ip_address'";
                                 $result_products_quantity=mysqli_query($con,$update_cart);
-                                $total_price=$total_price*$quantities;
+                                $total_price=$total_price*$quantity;  
                             }
                         ?>
                         <td><?php echo $price_table ?>/-</td>
@@ -90,14 +93,14 @@ include('functions/common_function.php');
                             <!--<button class="bg-info p-2 px-3 border-0 mx-3">
                             Update
                         </button>-->
-                        <input type="submit" value="Update Cart" class="bg-info p-2 px-3 border-0 mx-3" name="update_cart">
+                        <input type="submit" value="Update Cart" class="update_cart_btn" name="update_cart">
                         <!--<button class="bg-info p-2 px-3 border-0 mx-3">Remove</button></td>-->
-                        <input type="submit" value="Remove Cart" class="bg-info p-2 px-3 border-0 mx-3" name="remove_cart">
+                        <input type="submit" value="Remove Cart" class="update_cart_btn" name="remove_cart">
                     </tr>
                     <?php
                         }}}
                         else{
-                            echo "<h2 class='text-center text-danger'>Cart is empty</h2>";
+                            echo "<h2 class='text-center cart_empy'>Cart is empty</h2>";
                         }
                         ?>
                 </tbody>
@@ -105,21 +108,21 @@ include('functions/common_function.php');
             <!--subttoal-->
             <div class="d-flex mb-5">
                 <?php 
-                    $get_ip_address = getIPAddress();  //::1
+                    $get_ip_address = getIPAddress();  //::1 
                     $cart_query="Select * from `cart_details` where ip_address='$get_ip_address'";
                     $result=mysqli_query($con,$cart_query);
                     $result_count=mysqli_num_rows($result);
                     if($result_count>0){
                         echo "
-                        <h4 class='px-3'>Subtotal: <strong class='text-info'>$total_price/-</strong></h4>
-                        <input type='submit' value='Conitnue Shopping' class='bg-info p-2 px-3 border-0 mx-3' name='continue_shopping'>
-                        <button class='bg-secondary p-2 px-3 border-0 text-light'><a href='./users_area/checkout.php' class='text-light text-decoration-none'>Checkout</a></button>";
+                        <li class='cart_li'><h4>Subtotal: <strong style='color:#088178'>$total_price/-</strong></h4></li>
+                        <li class='cart_li'><input type='submit' value='Conitnue Shopping' class='update_cart_btn' name='continue_shopping'></li>
+                        <li class='cart_li'><button class='update_cart_btn'><a href='./users_area/checkout.php' class='text-light text-decoration-none'>Checkout</a></button></li>";
                     }
                     else{
-                        echo "<input type='submit' value='Conitnue Shopping' class='bg-info p-2 px-3 border-0 mx-3' name='continue_shopping'>";
+                        echo "<input type='submit' value='Conitnue Shopping' class='update_cart_btn' name='continue_shopping'>";
                     }
                     if(isset($_POST['continue_shopping'])){
-                        echo "<script>window.open('index.php','_self')</script>";
+                        echo "<script>window.open('display_all.php','_self')</script>";
                     }
                 ?>
             </div>

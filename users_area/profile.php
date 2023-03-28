@@ -25,8 +25,9 @@ session_start();
             width:90%;
             margin:auto;
             display:block;
-            /*height:100%;*/
+            border-radius:50%;
             objech-fit:contain;
+            margin:9px;
         }
         .edit_img{
             width:100px;
@@ -70,7 +71,7 @@ session_start();
         <div class="col-md-2">
             <div class="col-md-10">
             <ul class="navbar-nav bg-secondary text-center" style="height:100vh">
-                <li class="nav-item bg-info">
+                <li class="nav-item update_userprofile">
                 <a class="nav-link text-light" href="#"><h4>Your Profile</h4></a>
                 </li>
 
@@ -87,23 +88,23 @@ session_start();
                    ";
                 ?>
 
-                <li class="nav-item ">
+                <li class="nav-item user_manu">
                 <a class="nav-link text-light" href="profile.php">Pending Orders</a>
                 </li>
 
-                <li class="nav-item ">
+                <li class="nav-item user_manu">
                 <a class="nav-link text-light" href="profile.php?edit_account">Edit Account</a>
                 </li>
 
-                <li class="nav-item ">
+                <li class="nav-item user_manu">
                 <a class="nav-link text-light" href="profile.php?my_orders">My Orders</a>
                 </li>
                 
-                <li class="nav-item ">
+                <li class="nav-item user_manu">
                 <a class="nav-link text-light" href="profile.php?delete_account">Delete Account</a>
                 </li>
                 
-                <li class="nav-item ">
+                <li class="nav-item user_manu">
                 <a class="nav-link text-light" href="logout.php">Log out</a>
                 </li>
             </ul>

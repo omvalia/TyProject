@@ -11,7 +11,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce Website using PHP and MySQL</title>
-    <!--Bootstrap CSS link -->
+    <!--Bootstrap CSS link -->  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!--Font Awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,8 +30,6 @@ session_start();
             <ul id="navbar">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="display_all.php" class="active">Shop</a></li>
-                <li><a href="index.php">About</a></li>
-                <li><a href="index.php">Contact</a></li>
                 <li>
                 <?php
                 if(!isset($_SESSION['username'])){
@@ -39,6 +37,7 @@ session_start();
                 }
                 else{
                     echo"<a href='./users_area/logout.php' id='navbar'>Logout</a>";
+                    echo "<li><a href='./users_area/profile.php' id='navbar'>Account</a></li>";
                 }
                 ?>
                 </li>
@@ -52,49 +51,33 @@ session_start();
         <p>Save more with coupons $ up to 70% off</p>
     </section>
 
-    <section id="product1">
-        <div class="pro_head">
-            <h2>Featured Products</h2>
-            <p>Summer Collection New Mordern Design</p>
+        <section id="display_products">
+        <div class="product_boxes shop_product" id="product1">
+            <?php
+                get_all_products();
+                get_unique_brands();
+                get_unique_categories();
+                $ip=getIPAddress();
+            ?>
         </div>
-        <div class="row px-1">
-            <div class="col-md-10">
-                <div class="row">
-                    <div class="product-boxes">
-                        <?php get_all_products();
-                              get_unique_categories();
-                              get_unique_brands();
-                              $ip = getIPAddress();  
-                        ?>
-                    </div>
-                    <!--row end-->
-                </div>
-            <!--column end-->
-            </div>
-            
-            <!--side nav-->
-            <div class="col-md-2 p-0 side_bar">
-            <!--Brands to be displayed-->
-            <ul class="navbar-nav me-auto text-center">
-                <li class="nav-item side_nav_head">
-                    <a href="#" class="nav-link"><h4 class="side_nav_h">Delivery Brands</h4></a>
+    
+        <div class="filter_products">
+            <ul class="navbar-nav ne-auto text-center">
+                <li class="nav-item fil_pro">
+                    <a href="#" class="nav-link"><h4>Brands</h4></a>
+                    <?php 
+                        getbrands();
+                    ?>
                 </li>
-                <?php
-                    getbrands(); 
-                ?>
-           </ul>
-           <!--Categories to be displayed-->
-           <ul class="navbar-nav me-auto text-center">
-                <li class="side_nav_head">
-                    <a href="#" class="nav-link"><h4 class="side_nav_h">Categories</h4></a>
+                <li class="nav-item fil_pro">
+                    <a href="#" class="nav-link"><h4>Categories</h4></a>
+                    <?php 
+                        getcategories();
+                    ?>
                 </li>
-                <?php
-                    getcategories();
-                ?>
-           </ul>
+            </ul>
         </div>
-        </div>
-    </section>
+        </section>
 
     <section id="pagination" class="section-p1">
         <a href="#">1</a>

@@ -9,7 +9,7 @@
 <body>
     <h3 class="text-center text-success">All Products</h3>
     <table class="table table-bordered mt-5">
-        <thead class="bg-info">
+        <thead class="update_view_product">
             <tr>
                 <th>Product ID</th>
                 <th>Product Title</th>
