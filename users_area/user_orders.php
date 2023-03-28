@@ -16,7 +16,7 @@
     ?>
     <h3 class="text-success text-center">All my orders</h3> 
     <table class="table table-borered mt-5">
-        <thead class="bg-info">
+        <thead class="update_my_order">
         <tr>
             <th>Serial No.</th>
             <th>Amount Due</th>

@@ -5,7 +5,7 @@
 </head>
 <body>
        <!--Footer Section-->
-       <footer class="section-p1">
+       <footer class="section-p1 update_footer">
               <div class="col contact">
                      <img src="./images/logo3.png" alt="" class="logo foot-logo">
                      <h4>Contact</h4>

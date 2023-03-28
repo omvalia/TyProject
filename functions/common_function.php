@@ -44,6 +44,49 @@ function getproducts(){
 }
 }
 
+//Displaying Latest Products - New Arrivals
+function getproducts_new(){
+    global $con;
+
+    //condition to check isset or not
+    if(!isset($_GET['categories']) && !isset($_GET['search_data_product']))
+    {
+        if(!isset($_GET['brand'])){
+
+            $select_query="select * from `products` order by product_id desc limit 0,4";
+            $result_query=mysqli_query($con,$select_query);
+            //$row=mysqli_fetch_assoc($result_query);
+            //echo $row['product_title'];
+            while($row=mysqli_fetch_assoc($result_query)){
+                $product_id=$row['product_id'];
+                $product_title=$row['product_title'];
+                $product_description=$row['product_description'];
+                $product_keywords=$row['product_keywords'];
+                $product_image1=$row['product_image1'];
+                $product_price=$row['product_price'];
+                $category_id=$row['category_id'];
+                $brand_id=$row['brand_id'];
+                echo "  
+                <div class='pro-container'>
+                    <div class='pro'>
+                        <div class='pro-img'>
+                            <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
+                        </div>
+                        <div class='des'>
+                            <h5>$product_title</h5>
+                            <h4>₹$product_price/-</h4>
+                            <a class='view_more' href='product_details.php?product_id=$product_id'>View More</a>
+                            <a href='index.php?add_to_cart=$product_id'><i class='fa-solid fa-cart-shopping pro_cart'></i></a>
+                        </div>
+                    </div>  
+                    </div>
+        ";
+    }
+}
+}
+}
+
+
 //getting all products
 function get_all_products(){
     global $con;
@@ -268,38 +311,14 @@ function view_details()
                 $category_id=$row['category_id'];
                 $brand_id=$row['brand_id'];
                 echo "  
-                <div class='col-md-4 mb-2'>
-                    <div class='card'>
-                        <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
-                        <div class='card-body'>
-                            <h5 class='card-title'>$product_title</h5>
-                            <p class='card-text'>$product_description</p>
-                            <p class='card-text'>$product_price/-</p>
-                            <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to Cart</a>
-                            <a href='index.php' class='btn btn-secondary'>Go Home</a>
-                        </div>
-                    </div>  
-            </div>
-            <div class='col-md-8'>
-            <!-- related card-->
-            <div class='row'>
-                <div class='col-md-12'>
-                    <h4 class='text-center text-info mb-5'>Related Products</h4>
-                </div>
-                <div class='col-md-6'>
-                <img src='./admin_area/product_images/$product_image2' class='card-img-top' alt='$product_title'>
-                </div>
-                <div class='col-md-6'>
-                <img src='./admin_area/product_images/$product_image3' class='card-img-top' alt='$product_title'>
-                </div>
-            </div>
-        </div>
-        ";
+                
+                ";
     }
 }
 }   
 }
 }
+
 //get ip address function
     function getIPAddress() {  
     //whether ip is from the share internet  
@@ -319,7 +338,7 @@ function view_details()
 //$ip = getIPAddress();  
 //echo 'User Real IP Address - '.$ip; 
 
-//cart function
+//cart function 
 function cart(){
     if(isset($_GET['add_to_cart']))
     {

@@ -13,15 +13,14 @@
             <ul id="navbar">
                 <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="display_all.php">Shop</a></li>
-                <li><a href="index.php">About</a></li>
-                <li><a href="index.php">Contact</a></li>
                 <li>
                 <?php
                 if(!isset($_SESSION['username'])){
                     echo "<a href='./users_area/user_login.php' id='navbar'>Login</a>";
                 }
                 else{
-                    echo"<a href='./users_area/logout.php' id='navbar'>Logout</a>";
+                    echo"<li><a href='./users_area/logout.php' id='navbar'>Logout</a></li>";
+                    echo "<li><a href='./users_area/profile.php' id='navbar'>Account</a></li>";
                 }
                 ?>
                 </li>

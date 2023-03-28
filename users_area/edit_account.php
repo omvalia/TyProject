@@ -38,8 +38,13 @@ if(isset($_GET['edit_account'])){
     <title>Edit account</title>
 </head>
 <body>
+    <div class="update_edit_account">
     <h3 class="text-center text-success mb-4">Edit Account</h3>
     <form action="" method="post" enctype="multipart/form-data" class="text-center">
+        <div class="form-outline mb-4  w-50 m-auto">
+            <img src="./user_images/<?php echo $user_image?>" alt="" class="edit_img upadte-profile_image">
+            <input type="file" class="form-control m-auto" name="user_image" placeholder="Change your profile picture">
+        </div>
         <div class="form-outline mb-4">
             <input type="text" class="form-control w-50 m-auto" value="<?php echo $username ?>" name="user_username" >
         </div>
@@ -48,10 +53,7 @@ if(isset($_GET['edit_account'])){
             <input type="email" class="form-control w-50 m-auto" value="<?php echo $user_email ?>" name="user_email">
         </div>
 
-        <div class="form-outline mb-4 d-flex w-50 m-auto">
-            <input type="file" class="form-control m-auto" name="user_image" placeholder="Change your profile picture">
-            <img src="./user_images/<?php echo $user_image?>" alt="" class="edit_img">
-        </div>
+        
     
         <div class="form-outline mb-4">
             <input type="text" class="form-control w-50 m-auto" value="<?php echo $user_address ?>" name="user_address">
@@ -60,7 +62,8 @@ if(isset($_GET['edit_account'])){
         <div class="form-outline mb-4">
             <input type="text" class="form-control w-50 m-auto" value="<?php echo $user_mobile ?>" name="user_mobile">
         </div>
-        <input type="submit" value="Update" class="bg-info py-2 px-3 border-0" name="user_update">
+        <input type="submit" value="Update" class="" name="user_update">
     </form>
+    </div>
 </body>
 </html>

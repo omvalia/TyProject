@@ -6,12 +6,202 @@
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
+#custom_table
+{
+    margin:40px 0px;
+}
+.update_button
+{
+  margin:5px 0;
+  padding:2px;
+  transition: 0.3s all ease-in-out;
+}
+.update_button:hover
+{
+ border:2px solid #088178;
+ background: none;
+ color:black;
+}
+.update_footer
+{
+    background:#ccc;
+}
+.update_admin_pag
+{
+    margin:2px 2px;
+    color:black;
+    background: none;
+}
+.update_admin_pg
+{
+    display: flex;
+    list-style: none;
+    margin:0px 4px;
+}
+.update_admin_list
+{
+    padding:8px;
+    
+}
+.update_admin_list a
+{
+    font-size: 15px;
+    border-bottom: 2px solid #088178;
+    display: inline-block;
+}
+.update_admin_nav
+{
+    background: #ccc;
+    margin:0 33px;
+}
+.cart_li{
+    list-style: none;
+}
+.cart_empy{
+    color: #000;
+    margin: 20px;
+}
+.update_cart_btn
+{
+    margin: 10px;
+   background: #088178; 
+   border:none;
+   padding:10px;
+   color:white;
+   border-radius: 20px;
+}
+.update_view_product 
+{
+    background: #088178;
+}
+.update_view_cate
+{
+    background: #088178;
+}
+.update_brand
+{
+    background: #088178;
+}
+.update_brand_btn
+{
+    background: #088178; 
+}
+.update_view_barnd
+{
+    background: #088178; 
+}
+.update_list_order
+{
+    background: #088178;    
+}
+.update_list_pay
+{
+    background: #088178;    
+}
+.update_user
+{
+    background: #088178;
+}
+.update_insert_btn
+{
+    background: #088178; 
+}
+.update_insert_cate
+{
+    background:#088178;
+}
+.payment
+{
+  
+    text-align: center;
+}
+.payment_btn a
+{
+  text-decoration: none;
+  color:white;
+}
+  
+.payment_btn
+{
+  background:#088178;
+  padding:4px;
+  margin:4px;
+  border: none;
+  outline: none;
+}
+.update_user_regis
+{
+    background:#088178;
+}
+.update_header
+{
+    background: #088178;
+}
+.update_links a
+{
+    color:white;
+}
+.nav_container
+{
+  display: flex;
+  justify-content: space-between;
+  background: #e9ecef;
+}
+.update_logo
+{
+    margin:0px 10px;
+}
+.update_list_item
+{
+    display: flex;
+}
+.update_list_item li{
+    list-style: none;
+    padding:10px;
+    margin:10px;
+}
+/*---------------------------------------User page------------------------------------------*/
+.user_manu
+{
+   border:2px solid #94fcf5;
+   background:#088178;
+   padding:18px 4px;
+}
+.update_userprofile
+{
+    background:#088178;
+}
+.update_edit_account
+{
+    
+    margin:71px 10px;
+    background: #ccc;
+}
+.upadte-profile_image
+{
+    border-radius: 50%;
+    margin:13px 4px;
+}
+
+.update_my_order
+{
+    background:#088178;
+}
+
+
+
+.update_checkout
+{
+   border:2px solid red;
+}
+
+/* ------------------------------------------------------------------------------------------ */
 img{
     width: 100%;
 }
 .logo{
     width: 100px;
-    /*height: 50px;*/
+   
 }
 h1{
     font-size: 50px;
@@ -54,7 +244,7 @@ p{
     cursor: pointer;
     border: none;
     outline: none;
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
 body{
@@ -68,7 +258,7 @@ body{
     /*display: flex;*/
     align-items: center;
     /*justify-self: space-between;*/
-    padding: 20px 80px;
+    padding: 0px 12px;
     background: #E3E6F3;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
     z-index: 999;
@@ -205,7 +395,7 @@ body{
     box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
 }
 #product1 .pro img{
-    width: 50%;
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -252,7 +442,7 @@ body{
     text-decoration: none;
     color: #088178;
 }
-    
+
 
 /*Banner*/
 #banner{
@@ -402,6 +592,25 @@ footer .follow i:hover, footer a:hover{
 #all_pro_header span{
     color: #088178;
 }
+
+#display_products
+{
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+}
+.shop_product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.filter_products{
+    background-color: #E2E4E4;
+}
+.fil_pro{
+    background-color: #088178;
+}
+
 #pagination{
     text-align: center;
 }
@@ -417,18 +626,143 @@ footer .follow i:hover, footer a:hover{
     font-size: 16px;
     font-weight: 600;
 }
-.side_nav_head{
-    background-color: #088170;
+
+/*View More Page*/
+#prodetails{
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    margin-top: 20px;
 }
-.side_nav_h{
-    color: #fff;
+#prodetails .single-pro-img{
+    width: 50%;
+}
+.small-img-grp{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+#prodetails .single-pro-details h4{
+    padding: 5px;
+}
+#prodetails .single-pro-details .pro-head{
+    font-size: 12px;
+}
+#prodetails .single-pro-details .pro-title,
+#prodetails .single-pro-details .pro-price{
+    font-size: 25px;
     font-weight: 700;
 }
-.side_nav{
-    background-color: #D8D5D0;
+#prodetails .single-pro-details .pro-custom{
+    font-size: 15px;
+    font-weight: 500;
 }
-.side_nav:hover{
-    color: #465b52;
+#prodetails .single-pro-details input {
+    outline: none;
+}
+#prodetails .single-pro-details .btn-pro-details{
+    background-color: #088178;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+#prodetails .single-pro-details .btn-pro-details:hover{
+    background-color:  #cce7d0;
+    color: #088178;
+}
+#prodetails .single-pro-details .pro-info{
+    margin-top: 15px;
+}
+#prodetails .single-pro-details span{
+    line-height: 25px;
 }
 
+/* Login Page */
 
+.user_login_page {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.user_login_page h2 {
+    text-align: center;
+    color: #088178;
+}
+.user_login_page .user_login_field {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+}
+.user_login_btn{
+    text-align: center;
+    background-color: #088178;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+.user_login_btn:hover {
+    background-color: #06635b;
+}
+
+/*Registeration Page*/
+.user_regis_page {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.user_regis_page .user_regis_head {
+    text-align: center;
+    color: #088178;
+}
+.user_regis_page .user_regis_field{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+}
+.user_regis_page .user_regis_btn{
+    text-align: center;
+    background-color: #088178;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+.user_regis_btn:hover {
+    background-color: #06635b;
+}
+
+/*Insert Product Button*/
+.update_insert_btn{ 
+    margin: 10px;
+    text-align: center;
+    color: #ccc;
+    margin-left: 200px;
+}

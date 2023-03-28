@@ -66,7 +66,7 @@ session_start();
             <p>Summer Collection New Mordern Design</p>
         </div>
         <div class="product-boxes">
-            <?php getproducts();?>
+            <?php getproducts_new();?>
         </div>
     </section>
 

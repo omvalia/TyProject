@@ -15,7 +15,7 @@ include('../functions/common_function.php');
     <!--Font Awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--CSS Link-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <style>
         body{
             over-flow-x:hidden;
@@ -23,34 +23,33 @@ include('../functions/common_function.php');
     </style>
 </head>
 <body>
-    <div class="container-fluid my-3">
-        <h2 class="text-center">User Login</h2>
-        <div class="row d-flex align-items-center justify-content-center mt-5">
-            <div class="lg-12 col-xl-6">
+   
+    <div class="user_login_page">
+        <h2 class="text-center user-head">User Login</h2>
+        <div>
                 <form action="" method="post" >
-                    
                     <!--Username-->
-                    <div class="form-outline mb-4">
+                    <div>
                         <label for="user_username" class="form-label">Username</label>
-                        <input type="text" id="user_username" class="form-control" placeholder="Enter your username" autocomplete="off" required="required" name=user_username>
+                        <input type="text" class="user_login_field" id="user_username"  placeholder="Enter your username" autocomplete="off" required="required" name=user_username>
                     </div>
                 
                      <!--Password-->
-                     <div class="form-outline mb-4">
+                     <div>
                         <label for="user_password" class="form-label">Password</label>
-                        <input type="password" id="user_password" class="form-control" placeholder="Enter your password" autocomplete="off" required="required" name=user_password>
+                        <input type="password" class="user_login_field" id="user_password"  placeholder="Enter your password" autocomplete="off" required="required" name=user_password>
                     </div>
 
-                    <div class="mt-4 pt-4">
-                        <input type="submit" value="Login" class="bg-info py-2 px-3 border-0" name="user_login">
-                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="user_registeration.php" class="text-danger text-decoration-none"> Register</a></p>
+                    <div>
+                        <input type="submit" value="Login" name="user_login"  class="user_login_btn">
                     </div>
+                    <p class="text-center">Don't have an account? <a href="user_registeration.php" class="text-danger text-decoration-none"> Register</a></p>
                 </form>
-            </div>
         </div>
     </div>
 </body>
 </html>
+
 
 <!--php code-->
 <?php
@@ -79,7 +78,7 @@ if(isset($_POST['user_login'])){
             }else{
                 $_SESSION['username']=$user_username;
                 echo"<script>alert('Login Successful')</script>";
-                echo"<script>window.open('payment.php','_self')</script>";
+                echo"<script>window.open('../index.php','_self')</script>";
             }
         }else{
             echo"<script>alert('Invalid credientials')</script>";    

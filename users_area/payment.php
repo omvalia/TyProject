@@ -14,7 +14,8 @@ include('../functions/common_function.php');
     <!--Font Awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--CSS Link-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    
     <style>
         body{
             width:100%;
@@ -33,14 +34,14 @@ include('../functions/common_function.php');
 
 
 
-    <div class="container">
-        <h2 class="text-center text-info">Payment Options</h2>
-        <div class="row d-flex justify-content-center align-items-center mt-5">
-            <div class="col-md-6">
-            <a href="https://www.paypal.com" target="_blank"><h3 class="text-center m-5">Pay Online</h3></a>
-            <div class="col-md-6">
-            <a href="order.php?user_id=<?php echo $user_id?>" target="_blank"><h3 class="text-center m-5">Pay Offline</h3></a>
-            </div>
+    <div class="payment">
+        <h2 class="update_payment_text">Payment Options</h2>
+        <div class="">
+            <div class="">
+           <button class="payment_btn"> <a href="https://www.paypal.com" target="_blank">Pay Online</a></button>
+            <div class="">
+           <button class="payment_btn"> <a href="order.php?user_id=<?php echo $user_id?>" target="_blank">Pay Offline</a></button>
+      </div>
         </div>
     </div>
 </body>

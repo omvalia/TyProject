@@ -1,6 +1,6 @@
 <h3 class="text-center text-success">All orders</h3>
 <table class="table table-bordered mt-5">
-    <thead class="bg-info">
+    <thead class="update_list_order">
         <?php
         $get_orders="select * from `user_orders`";
         $result=mysqli_query($con,$get_orders);

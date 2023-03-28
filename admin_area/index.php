@@ -55,24 +55,24 @@ include('../functions/common_function.php');
 
         <!--second child-->
         <div class="row">
-            <div class="col-md-12 bg-secondary p-1 d-flex align-items-center">
+            <div class="update_admin_nav">
                 <div class="p-3">
-                    <a href="#">
+                    <!-- <a href="#">
                         <img src="../images/apple.jpeg" alt="" class="admin_image">
-                    </a>
-                    <p class="text-light text-center">Admin Name</p>
+                    </a> -->
+                    <!-- <p class="text-light text-center">Admin Name</p> -->
                 </div>
-                <div class="button text-center">
-                    <button class="my-3"><a href="insert_product.php" class="nav-link text-light bg-info my-1">Insert Products</a></button>
-                    <button><a href="index.php?view_products" class="nav-link text-light bg-info my-1">View Products</a></button>
-                    <button><a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
-                    <button><a href="index.php?view_categories" class="nav-link text-light bg-info my-1">View Categories</a></button>
-                    <button><a href="index.php?insert_brand" class="nav-link text-light bg-info my-1">Insert Brands</a></button>
-                    <button><a href="index.php?view_brands" class="nav-link text-light bg-info my-1">View Brands</a></button>
-                    <button><a href="index.php?list_orders" class="nav-link text-light bg-info my-1">All Orders</a></button>
-                    <button><a href="index.php?list_payments" class="nav-link text-light bg-info my-1">All Payments</a></button>
-                    <button><a href="index.php?list_user" class="nav-link text-light bg-info my-1">List Users</a></button>
-                    <button><a href="" class="nav-link text-light bg-info my-1"></a>Logout</button>
+                <div class="update_admin_pg">
+                    <li class="update_admin_list"><a href="insert_product.php" class="nav-link ">Insert Products</a></li>
+                    <li class="update_admin_list"><a href="index.php?view_products" class="nav-link ">View Products</a></li>
+                    <li class="update_admin_list"><a href="index.php?insert_category" class="nav-link ">Insert Categories</a></li>
+                    <li class="update_admin_list"><a href="index.php?view_categories" class="nav-link ">View Categories</a></li>
+                    <li class="update_admin_list"><a href="index.php?insert_brand" class="nav-link ">Insert Brands</a></li>
+                    <li class="update_admin_list"><a href="index.php?view_brands" class="nav-link">View Brands</a></;>
+                    <li class="update_admin_list"><a href="index.php?list_orders" class="nav-link ">All Orders</a></li>
+                    <li class="update_admin_list"><a href="index.php?list_payments" class="nav-link ">All Payments</a></li>
+                    <li class="update_admin_list"><a href="index.php?list_user" class="nav-link">List Users</a></li>
+                    <li class="update_admin_list"><a href="" class="nav-link "></a>Logout</li>
                 </div>
             </div>
         </div>

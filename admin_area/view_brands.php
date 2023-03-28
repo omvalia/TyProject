@@ -1,6 +1,6 @@
 <h3 class="text-center text-success">All Brands</h3>
 <table class="table table-bordered mt-5">
-    <thead class="bg-info">
+    <thead class="update_view_barnd">
         <tr class="text-center">
             <th>Serial No.</th>
             <th>Brand Title</th>
