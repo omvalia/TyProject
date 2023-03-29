@@ -17,7 +17,62 @@ session_start();
     <!--CSS Link-->
     <link rel="stylesheet" href="../style.css?version=1">
     <style>
+        .container {
+            background-color: #ccc; 
+            padding: 20px;
+        }
 
+        h2 {
+            color: #088178;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+.your_order, .delivery_details, .payment_options {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.your_order h3, .delivery_details h3, .payment_options h3 {
+  color: #088178;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.your_order p {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.your_order img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.delivery_details label, .delivery_details input[type="text"], .payment_options label, .payment_options input[type="radio"] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.delivery_details input[type="text"], .payment_options input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.payment_options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.payment_options label {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
     </style>
 </head>
 <body>
@@ -43,32 +98,6 @@ session_start();
      </div>
    </div>
      
-  
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-        <ul class="navbar-nav me-auto">
-            <?php
-                if(!isset($_SESSION['username'])){
-                    echo"
-                    <li class='nav-item'>
-                    <a class='nav-link' href='#'>Welcome Guest</a>
-                </li>";
-                }else{
-                    echo"<a class='nav-link' href='#'>Welcome ".$_SESSION['username']."</a>";
-                }
-                if(!isset($_SESSION['username'])){
-                    echo "<a class='nav-link' href='./users_area/user_login.php'>Login</a>";
-                }else{
-                    echo"<a class='nav-link' href='./users_area/logout.php'>Logout</a>";
-                }
-            ?>
-        </ul>
-    </nav> -->
-
-    <!-- third child-->
-    <div class="bg-light">
-        <h3 class="text-center">Home Decor</h3>
-        
-    </div>
 
     <!-- fourth child-->
     <div class="row px-1">
@@ -86,6 +115,8 @@ session_start();
             <!--column end-->
         </div>
     </div>
+
+    
 
     <!--last child-->
     <!--include footer-->

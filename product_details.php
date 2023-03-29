@@ -23,57 +23,13 @@ session_start();
 </head>
 <body>
     <!--navbar-->
-    <section id="header">
-        <a href="index.php"><img src="./images/logo3.png" alt="logo" class="logo" ></a>
-        <div>   
-            <ul id="navbar">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="display_all.php" class="active">Shop</a></li>
-                <li><a href="index.php">About</a></li>
-                <li><a href="index.php">Contact</a></li>
-                <li>
-                <?php
-                if(!isset($_SESSION['username'])){
-                    echo "<a href='./users_area/user_login.php' id='navbar'>Login</a>";
-                }
-                else{
-                    echo"<a href='./users_area/logout.php' id='navbar'>Logout</a>";
-                }
-                ?>
-                </li>
-                <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item()?></sup></i></a></li>
-            </ul>
-        </div>
-    </section>
+    <?php
+       include('./includes/navbar.php');
+    ?>
 
-    <section id="prodetails" class="section-p1">
-    <div class="single-pro-img">
-        <img src="images/apple.jpeg" id="main-img" alt="product">    
-
-        <div class="small-img-grp">
-                <div class="small-img-col">
-                    <img src="images/logo3.png" class="small-img" alt="">
-                </div>
-        
-                <div class="small-img-col">
-                    <img src="images/logo3.png" class="small-img" alt="">
-                </div>
-                
-                <div class="small-img-col">
-                    <img src="images/logo3.png" class="small-img" alt="">
-                </div>
-        </div>
-    </div>
-    <div class="single-pro-details">
-        <h4 class="pro-head">Home / Chair</h4>
-        <h4 class="pro-title">Men's Fashion T-shirt</h4>
-        <h4 class="pro-price">Price: $139</h4>
-        <h4 class="pro-custom">Enter Customizable Size: <input class="custom-size" type="text" name="" id="" placeholder="Enter Length"> X <input class="custome-size" type="text" name="" id="" placeholder="Enter Breadth"></h4>
-        <button class="btn-pro-details">Add to Cart</button>
-        <h4 class="pro-info">Product Details</h4>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex possimus cupiditate reiciendis sequi nihil nulla tempore dicta iusto odio! Debitis porro quae quod inventore repellat obcaecati iste hic at nostrum soluta, quas labore laboriosam modi autem minima voluptatibus maxime mollitia? Animi debitis fuga saepe sapiente nostrum commodi dolorem nam consectetur?</span>
-    </div>
-    </section>
+    <?php
+        view_details()
+    ?>
 
     <section id="product1">
         <div class="pro_head">
@@ -103,24 +59,26 @@ session_start();
        include('./includes/footer.php');
     ?>
     </div>
-    
+    <!--
     <script>
-        var main-img= document.getElementbyId("main-img");
-        var small-img=document.getElementbyClassName("small-img");
+                    var main-img= document.getElementbyId('main-img');
+                    var small-img=document.getElementbyClassName('small-img');
         
-        small-img[0].onclick = function(){
-            main-img.src=small-img[0].src;
-        }
-        small-img[1].onclick = function(){
-            main-img.src=small-img[1].src;
-        }
-        small-img[2].onclick = function(){
-            main-img.src=small-img[2].src;
-        }
-        small-img[3].onclick = function(){
-            main-img.src=small-img[3].src;
-        }
-    </script>
+                    small-img[0].onclick = function(){
+                    main-img.src=small-img[0].src;
+                    }
+                    small-img[1].onclick = function(){
+                    main-img.src=small-img[1].src;
+                    }
+                    small-img[2].onclick = function(){
+                    main-img.src=small-img[2].src;
+                    }
+                    small-img[3].onclick = function(){
+                    main-img.src=small-img[3].src;
+                    }
+                    </script>
+                -->
+
     <!--Bootsrap JS Link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

@@ -246,6 +246,7 @@ function getcategories(){
                 }
 }
 
+/*
 //searching products function
 function search_product(){
                 global $con;
@@ -282,7 +283,7 @@ function search_product(){
         }
     }
 }
-
+*/
 //view details function
 function view_details()
 {
@@ -311,7 +312,27 @@ function view_details()
                 $category_id=$row['category_id'];
                 $brand_id=$row['brand_id'];
                 echo "  
-                
+                <section id='prodetails' class='section-p1'>
+                <div class='single-pro-img'>
+                    
+                    <img src='./admin_area/product_images/$product_image1' id='main-img' alt='product'>    
+                    
+                    <div class='small-img-grp'>
+                            <div class='small-img-col'>
+                                <img src='./admin_area/product_images/$product_image2' class='small-img'>
+                            </div>
+                    
+                            <div class='small-img-col'>
+                                <img src='./admin_area/product_images/$product_image3' class='small-img'>
+                            </div>  
+                    </div>
+                </div>
+                <div class='single-pro-details'>
+                    <h4 class='pro-title'>$product_title</h4>
+                    <h4 class='pro-price'>Price:<span>Rs $product_price</span></h4>
+                    <h4 class='pro-info'>$product_description</h4>
+                    <a href='product_details.php?add_to_cart=$product_id'><button class='btn-pro-details'>Add to Cart</button></a>
+                </section>
                 ";
     }
 }

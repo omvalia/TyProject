@@ -611,58 +611,53 @@ footer .follow i:hover, footer a:hover{
     background-color: #088178;
 }
 
-#pagination{
-    text-align: center;
-}
-#pagination a{
-    text-decoration: none;
-    background-color: #088178;
-    padding: 15px 15px;
-    border-radius: 4px;
-    color: #fff;
-    font-weight: 600;
-}
-#pagination a i{
-    font-size: 16px;
-    font-weight: 600;
-}
-
 /*View More Page*/
-#prodetails{
-    display: grid;
-    grid-template-columns: 4fr 6fr;
-    margin-top: 20px;
-}
 #prodetails .single-pro-img{
-    width: 50%;
+    width: 40%;
+    margin-right: 50px;
+}
+.single-pro-img #main-img{
+    border: 1px solid;
+    background-color: #ccc;
+    border-radius: 10px;
 }
 .small-img-grp{
     display: flex;
     justify-content: space-between;
 }
+
 .small-img-col{
-    flex-basis: 24%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid;
+    background-color: #fff;
+    border-radius: 10px;
     cursor: pointer;
 }
+#prodetails{
+    display: flex;
+    margin-top: 20px;
+}
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+
 #prodetails .single-pro-details h4{
     padding: 5px;
 }
-#prodetails .single-pro-details .pro-head{
-    font-size: 12px;
-}
+
 #prodetails .single-pro-details .pro-title,
 #prodetails .single-pro-details .pro-price{
-    font-size: 25px;
-    font-weight: 700;
-}
-#prodetails .single-pro-details .pro-custom{
-    font-size: 15px;
+    font-size: 22px;
     font-weight: 500;
 }
-#prodetails .single-pro-details input {
-    outline: none;
+#prodetails .single-pro-details .pro-price span{
+    color: #088178;
 }
 #prodetails .single-pro-details .btn-pro-details{
+    margin-top: 10px;
     background-color: #088178;
     color: #fff;
     text-decoration: none;
@@ -673,6 +668,7 @@ footer .follow i:hover, footer a:hover{
     font-weight: 700;
     margin-bottom: 15px;
     transition: 0.3s ease;
+    
 }
 #prodetails .single-pro-details .btn-pro-details:hover{
     background-color:  #cce7d0;
@@ -680,13 +676,13 @@ footer .follow i:hover, footer a:hover{
 }
 #prodetails .single-pro-details .pro-info{
     margin-top: 15px;
+    font-size: 17px;
 }
 #prodetails .single-pro-details span{
     line-height: 25px;
 }
-
+*/
 /* Login Page */
-
 .user_login_page {
     background-color: #ccc;
     padding: 20px;
@@ -694,7 +690,6 @@ footer .follow i:hover, footer a:hover{
     max-width: 400px;
     margin: 0 auto;
     margin-top: 50px;
-    margin-bottom: 20px;
 }
 .user_login_page h2 {
     text-align: center;
