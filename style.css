@@ -369,6 +369,18 @@ body{
     flex-wrap: wrap;
 }
 
+/* temp */
+
+.pro-container-for-row{
+    display: flex;  
+    flex-direction: row;
+    justify-content: center; 
+    padding-top: 20px;
+    flex-wrap: wrap;
+    max-width:350px;
+}
+/* temp end */
+
 .pro_head{
     text-align: center;
 }
@@ -595,20 +607,28 @@ footer .follow i:hover, footer a:hover{
 
 #display_products
 {
-    display: grid;
-    grid-template-columns: 7fr 3fr;
+    /* display: grid;
+    grid-template-columns: 7fr 3fr; */
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 2px; */
 }
 .shop_product{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 .filter_products{
     background-color: #E2E4E4;
+    max-width: 500px;
+    margin-top: 35px;
+    margin-bottom: 600px;
 }
 .fil_pro{
     background-color: #088178;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 /*View More Page*/
@@ -685,17 +705,22 @@ footer .follow i:hover, footer a:hover{
 /* Login Page */
 .user_login_page {
     background-color: #ccc;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: 0 auto;
     margin-top: 50px;
+
+    max-width: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.user_login_page h2 {
+.user_login_page .user_login_head {
     text-align: center;
     color: #088178;
 }
-.user_login_page .user_login_field {
+.user_login_page .user_login_field{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -704,7 +729,7 @@ footer .follow i:hover, footer a:hover{
     border-radius: 4px;
     background-color: #f2f2f2;
 }
-.user_login_btn{
+.user_login_page .user_login_btn{
     text-align: center;
     background-color: #088178;
     padding: 14px 20px;
@@ -717,13 +742,12 @@ footer .follow i:hover, footer a:hover{
 .user_login_btn:hover {
     background-color: #06635b;
 }
-
 /*Registeration Page*/
 .user_regis_page {
     background-color: #ccc;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     margin-top: 50px;
 }

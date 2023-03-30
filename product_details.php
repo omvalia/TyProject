@@ -52,32 +52,12 @@ session_start();
             <button class="normal">Sign Up</button>
         </div>
     </section>
-
     <!--last child-->
      <!--include footer-->
      <?php
        include('./includes/footer.php');
     ?>
     </div>
-    <!--
-    <script>
-                    var main-img= document.getElementbyId('main-img');
-                    var small-img=document.getElementbyClassName('small-img');
-        
-                    small-img[0].onclick = function(){
-                    main-img.src=small-img[0].src;
-                    }
-                    small-img[1].onclick = function(){
-                    main-img.src=small-img[1].src;
-                    }
-                    small-img[2].onclick = function(){
-                    main-img.src=small-img[2].src;
-                    }
-                    small-img[3].onclick = function(){
-                    main-img.src=small-img[3].src;
-                    }
-                    </script>
-                -->
 
     <!--Bootsrap JS Link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

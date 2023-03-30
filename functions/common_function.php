@@ -110,7 +110,7 @@ function get_all_products(){
                 $category_id=$row['category_id'];
                 $brand_id=$row['brand_id'];
                 echo "  
-                <div class='pro-container'>
+                <div class='pro-container-for-row'>
                     <div class='pro'>
                         <div class='pro-img'>
                             <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
@@ -333,6 +333,7 @@ function view_details()
                     <h4 class='pro-info'>$product_description</h4>
                     <a href='product_details.php?add_to_cart=$product_id'><button class='btn-pro-details'>Add to Cart</button></a>
                 </section>
+                <script>
                 ";
     }
 }

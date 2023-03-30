@@ -24,9 +24,11 @@ include('../functions/common_function.php');
 </head>
 <body>
    
-    <div class="user_login_page">
-        <h2 class="text-center user-head">User Login</h2>
-        <div>
+    <div class="user_login_page" style="display: flex;
+    justify-content: center; align-items: center; align-content:center;
+    flex-direction: column; width: 100%;">
+        <h2 class="text-center user-head" style="margin-bottom: 100px;margin-top: 100px">User Login</h2>
+        <div style="width: 40%">
                 <form action="" method="post" >
                     <!--Username-->
                     <div>
