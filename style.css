@@ -607,11 +607,32 @@ footer .follow i:hover, footer a:hover{
 
 #display_products
 {
+<<<<<<< HEAD
     /* display: grid;
     grid-template-columns: 7fr 3fr; */
     display: flex;
     justify-content: space-between;
     /* max-width: 2px; */
+=======
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+}
+.shop_product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.filter_products{
+    background-color: #E2E4E4;
+}
+.fil_pro{
+    background-color: #088178;
+}
+
+#pagination{
+    text-align: center;
+>>>>>>> bf276754c652a9159911f07afdaad6767b675a5e
 }
 .shop_product{
     display: flex;

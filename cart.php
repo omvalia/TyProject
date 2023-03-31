@@ -75,7 +75,7 @@ include('functions/common_function.php');
                     <tr>
                         <td><?php echo $product_title?></td>
                         <td><img src="./admin_area/product_images/<?php echo $product_image1?>" alt="<?php echo $product_image1?>" class="cart_image"></td>
-                        <td><input type="number" class="form-input w-50" name="qty" value="1"></td>
+                        <td><input type="number" class="form-input w-50" name="qty"></td>
                         <?php 
                             $get_ip_address = getIPAddress();  //::1
                             if(isset($_POST['update_cart']))

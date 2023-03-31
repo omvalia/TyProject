@@ -312,6 +312,7 @@ function view_details()
                 $category_id=$row['category_id'];
                 $brand_id=$row['brand_id'];
                 echo "  
+<<<<<<< HEAD
                 <section id='prodetails' class='section-p1'>
                 <div class='single-pro-img'>
                     
@@ -334,6 +335,9 @@ function view_details()
                     <a href='product_details.php?add_to_cart=$product_id'><button class='btn-pro-details'>Add to Cart</button></a>
                 </section>
                 <script>
+=======
+                
+>>>>>>> bf276754c652a9159911f07afdaad6767b675a5e
                 ";
     }
 }

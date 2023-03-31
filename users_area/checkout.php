@@ -98,6 +98,35 @@ session_start();
      </div>
    </div>
      
+<<<<<<< HEAD
+=======
+  
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <ul class="navbar-nav me-auto">
+            <?php
+                if(!isset($_SESSION['username'])){
+                    echo"
+                    <li class='nav-item'>
+                    <a class='nav-link' href='#'>Welcome Guest</a>
+                </li>";
+                }else{
+                    echo"<a class='nav-link' href='#'>Welcome ".$_SESSION['username']."</a>";
+                }
+                if(!isset($_SESSION['username'])){
+                    echo "<a class='nav-link' href='./users_area/user_login.php'>Login</a>";
+                }else{
+                    echo"<a class='nav-link' href='./users_area/logout.php'>Logout</a>";
+                }
+            ?>
+        </ul>
+    </nav> -->
+
+    <!-- third child-->
+    <div class="bg-light">
+        <h3 class="text-center">Home Decor</h3>
+        
+    </div>
+>>>>>>> bf276754c652a9159911f07afdaad6767b675a5e
 
     <!-- fourth child-->
     <div class="row px-1">
