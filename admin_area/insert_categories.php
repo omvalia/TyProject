@@ -19,14 +19,14 @@ if(isset($_POST['insert_cat'])){
 }
 }
 ?>
-<h2 class="text-center">Insert Categories</h2>
-<form action="" method="post" class="mb-2">
-    <div class="input-group w-90 mb-2">
-        <span class="input-group-text update_insert_cate" id="basic-addon1"><i class="fa-solid-fa-recipt"></i></span>
-        <input type="text" class="form-control" name="cat_title" placeholder="Insert Categories" aria-label="Username" aria-describedby="basic-addon1">
+<div class="container mt-3">
+    <h3 class="text-center my-5" style="color: #088178">Insert Category</h3>
+    <form action="" method="post" class="text-center">
+    <div class="form-outline mb-4 w-50 m-auto">
+        <input type="text" class="form-control" name="cat_title" placeholder="Insert Categories">
     </div>
-    <div class="input-group w-10 mb-2">
-        <input type="submit" class="update_insert_cate border-0 p-2 my-2" name="insert_cat" value="Insert Category" aria-label="Username">
+        <input type="submit" class="update_insert_cate  admin_btn" name="insert_cat" value="Insert Category">
         
     </div>
 </form>
+</div>

@@ -18,14 +18,14 @@ if(isset($_POST['insert_brand'])){
 }
 }
 ?>
-<h2 class="text-center">Insert Brands</h2>
-<form action="" method="post" class="mb-2">
-    <div class="input-group w-90 mb-2">
-        <span class="input-group-text update_brand" id="basic-addon1"><i class="fa-solid-fa-recipt"></i></span>
-        <input type="text" class="form-control" name="brand_title" placeholder="Insert Brands" aria-label="Categories" aria-describedby="basic-addon1">
+<div class="container mt-3">
+    <h3 class="text-center my-5" style="color: #088178">Insert Brand</h3>
+    <form action="" method="post" class="text-center">
+    <div class="form-outline mb-4 w-50 m-auto">
+        <input type="text" class="form-control" name="brand_title" placeholder="Insert Brands">
     </div>
-    <div class="input-group w-10 mb-2">
-        
-        <input type="submit" class="update_brand_btn border-0 p-2 my-3" name="insert_brand" value="Insert Brands" aria-label="Username">   
+    <div>
+        <input type="submit" class="update_brand_btn admin_btn" name="insert_brand" value="Insert Brands">   
     </div>
 </form>
+</div>

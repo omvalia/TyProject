@@ -163,7 +163,6 @@
                             <input type="text" class="user_regis_field" id="user_address"  placeholder="Enter your address" autocomplete="off" required="required" name="user_address">
                         </div>
                     
-                    
                         <!--Contact-->
                         <div>
                             <label for="user_contact">Contact</label>

@@ -17,12 +17,12 @@ if(isset($_POST['edit_br'])){
 }
 ?>
 <div class="container mt-3">
-    <h1 class="text-center">Edit Category</h1>
+    <h1 class="text-center text-success my-5">Edit Brand</h1>
     <form action="" method="post" class="text-center">
         <div class="form-outline mb-4 w-50 m-auto">
             <label for="brand_name" class="form-label">Category Title</label>
             <input type="text" name="brand_name" id="brand_name" class="form-control" required="required" value='<?php echo $brand_name;?>'>
         </div>
-        <input type="submit" value="Update Brand" class="btn btn-info px-3 mb-3" name="edit_br">
+        <input type="submit" value="Update Brand" class="admin_btn" name="edit_br">
     </form>
 </div>

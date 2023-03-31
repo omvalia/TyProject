@@ -1,6 +1,7 @@
 <?php
 /*connect file*/
 include('../includes/connect.php');
+include('../functions/common_function.php');
 session_start();
 ?>
 <!DOCTYPE html>
@@ -17,16 +18,17 @@ session_start();
     <!--CSS Link-->
     <link rel="stylesheet" href="../style.css?version=1">
     <style>
-        .container {
-            background-color: #ccc; 
-            padding: 20px;
-        }
+.container {
+    padding: 20px;
+}
 
-        h2 {
-            color: #088178;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+h2 {
+     color: #088178;
+     font-size: 32px;
+     margin-bottom: 20px;
+     text-align:center;
+     margin-top:
+}
 
 .your_order, .delivery_details, .payment_options {
   background-color: #fff;
@@ -76,30 +78,31 @@ session_start();
     </style>
 </head>
 <body>
-   <div class="nav_container">
-     <div class="logo">
-     <img src="../images/logo3.png" alt="logo" class="update_logo" >
-     </div>
-     <div class="update_manu">
-     <ul class=" update_list_item">
-            <li class="nav-item">
-            <a class="nav-link active update_links" aria-current="page" href="../index.php">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../display_all.php">Products</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="user_registeration.php">Register</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-            </li>
-        </ul>
-     </div>
-   </div>
+<section id="header">
+        <a href="index.php"><img src="../images/logo3.png" alt="logo" class="logo" ></a>
+        <div>   
+            <ul id="navbar">
+                <li><a href="../index.php" class="active">Home</a></li>
+                <li><a href="../display_all.php">Shop</a></li>
+                <li>
+                <?php
+                if(!isset($_SESSION['username'])){
+                    echo "<a href='user_login.php' id='navbar'>Login</a>";
+                }
+                else{
+                    echo"<li><a href='logout.php' id='navbar'>Logout</a></li>";
+                    echo "<li><a href='profile.php' id='navbar'>Account</a></li>";
+                }
+                ?>
+                </li>
+                <li><a href="../cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item()?></sup></i></a></li>
+            </ul>
+        </div>
+    </section>
      
-
+    
     <!-- fourth child-->
+    
     <div class="row px-1">
         <!--products-->
         <div class="col-md-12">
@@ -115,7 +118,6 @@ session_start();
             <!--column end-->
         </div>
     </div>
-
     
 
     <!--last child-->

@@ -35,8 +35,8 @@
 .update_admin_pg
 {
     display: flex;
+    justify-content: center;
     list-style: none;
-    margin:0px 4px;
 }
 .update_admin_list
 {
@@ -46,13 +46,20 @@
 .update_admin_list a
 {
     font-size: 15px;
-    border-bottom: 2px solid #088178;
     display: inline-block;
 }
 .update_admin_nav
 {
     background: #ccc;
-    margin:0 33px;
+    margin: auto;
+}
+.admin_btn{
+    margin: 10px;
+   background: #088178; 
+   border:none;
+   padding:10px;
+   color:white;
+   border-radius: 20px;
 }
 .cart_li{
     list-style: none;
@@ -607,32 +614,11 @@ footer .follow i:hover, footer a:hover{
 
 #display_products
 {
-<<<<<<< HEAD
     /* display: grid;
     grid-template-columns: 7fr 3fr; */
     display: flex;
     justify-content: space-between;
     /* max-width: 2px; */
-=======
-    display: grid;
-    grid-template-columns: 7fr 3fr;
-}
-.shop_product{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-}
-.filter_products{
-    background-color: #E2E4E4;
-}
-.fil_pro{
-    background-color: #088178;
-}
-
-#pagination{
-    text-align: center;
->>>>>>> bf276754c652a9159911f07afdaad6767b675a5e
 }
 .shop_product{
     display: flex;

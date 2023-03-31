@@ -27,30 +27,27 @@ include('../functions/common_function.php');
     </style>
 </head>
 <body>
-    <div class="container-fluid m-3">
-        <h2 class="text-center mb-5">Admin Login</h2>
-        <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 col-xl-5">
-                <img src="../images/apple.jpeg" alt="Admin Registeration" class="img-fluid">
-            </div>
-            <div class="col-lg-6 col-xl-4">
+    <div class="user_login_page" style="display: flex;
+    justify-content: center; align-items: center; align-content:center;
+    flex-direction: column; width: 100%;">
+        <h2 class="text-center user-head" style="margin-bottom: 100px;margin-top: 100px">Admin Login</h2>
+        <div style="width: 40%">
                 <form action="" method="post">
-                    <div class="form-outline mb-4">
+                    <div>
                         <label for="username" class="form-label">Username</label><br>
-                        <input type="text" name="admin_name" id="username" placeholder="Enter your username" required="required" class="form-contol">
-                    </div>
-
-                    <div class="form-outline mb-4">
-                        <label for="password" class="form-label">Password</label><br>
-                        <input type="text" name="admin_password" id="password" placeholder="Enter your password" required="required" class="form-contol">
+                        <input type="text" class="user_login_field" name="admin_name" id="username" placeholder="Enter your username" required="required" class="form-contol">
                     </div>
 
                     <div>
-                        <input type="submit" name="admin_login" value="Login" class="bg-info py-2 px-3 border-0">
-                        <p class="small fw-bold mt-2 pt-1">Do you already have an account? <a href="admin_register.php" class="link-danger text-decoration-none">Register</a></p>
+                        <label for="password" class="form-label">Password</label><br>
+                        <input type="text" class="user_login_field" name="admin_password" id="password" placeholder="Enter your password" required="required" class="form-contol">
+                    </div>
+
+                    <div>
+                        <input type="submit" name="admin_login" value="Login" class="user_login_btn">
+                        <p class="text-center">Do you already have an account? <a href="admin_register.php" class="text-danger text-decoration-none">Register</a></p>
                     </div>
                 </form>
-            </div>
         </div>
     </div>
 </body>

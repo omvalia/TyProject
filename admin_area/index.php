@@ -50,7 +50,7 @@ include('../functions/common_function.php');
 
         <!--second child-->
         <div class="bg-light">
-            <h3 class="text-center p-2">Manage Details</h3>
+            <h3 class="text-center p-2 my-3">Manage Details</h3>
         </div>
 
         <!--second child-->
@@ -63,7 +63,7 @@ include('../functions/common_function.php');
                     <!-- <p class="text-light text-center">Admin Name</p> -->
                 </div>
                 <div class="update_admin_pg">
-                    <li class="update_admin_list"><a href="insert_product.php" class="nav-link ">Insert Products</a></li>
+                    <li class="update_admin_list"><a href="insert_product.php" class="nav-link">Insert Products</a></li>
                     <li class="update_admin_list"><a href="index.php?view_products" class="nav-link ">View Products</a></li>
                     <li class="update_admin_list"><a href="index.php?insert_category" class="nav-link ">Insert Categories</a></li>
                     <li class="update_admin_list"><a href="index.php?view_categories" class="nav-link ">View Categories</a></li>
@@ -72,13 +72,13 @@ include('../functions/common_function.php');
                     <li class="update_admin_list"><a href="index.php?list_orders" class="nav-link ">All Orders</a></li>
                     <li class="update_admin_list"><a href="index.php?list_payments" class="nav-link ">All Payments</a></li>
                     <li class="update_admin_list"><a href="index.php?list_user" class="nav-link">List Users</a></li>
-                    <li class="update_admin_list"><a href="" class="nav-link "></a>Logout</li>
+                    <li class="update_admin_list"><a href="index.php?edit_admin" class="nav-link">Edit Admin</a></li>
                 </div>
             </div>
         </div>
 
         <!--fourth child-->
-        <div class="conatiner my-3">
+        <div class="my-3">
             
             <?php
             if(isset($_GET['insert_category']))
@@ -157,6 +157,11 @@ include('../functions/common_function.php');
             {
             
                 include('list_user.php');
+            }
+            if(isset($_GET['edit_admin']))
+            {
+            
+                include('edit_admin.php');
             }
             ?>
         </div>

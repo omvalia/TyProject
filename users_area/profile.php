@@ -42,24 +42,24 @@ session_start();
         <a href="index.php"><img src="../images/logo3.png" alt="logo" class="logo" ></a>
         <div>   
             <ul id="navbar">
-                <li><a href="index.php" class="active">Home</a></li>
-                <li><a href="display_all.php">Shop</a></li>
-                <li><a href="index.php">About</a></li>
-                <li><a href="index.php">Contact</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../display_all.php">Shop</a></li>
                 <li>
                 <?php
                 if(!isset($_SESSION['username'])){
-                    echo "<a href='./users_area/user_login.php' id='navbar'>Login</a>";
+                    echo "<a href='user_login.php' id='navbar'>Login</a>";
                 }
                 else{
                     echo"<a href='./users_area/logout.php' id='navbar'>Logout</a>";
+                    echo "<li><a href='profile.php' id='navbar' class='active'>Account</a></li>";
                 }
                 ?>
                 </li>
-                <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item()?></sup></i></a></li>
+                <li><a href="../cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item()?></sup></i></a></li>
             </ul>
         </div>
     </section>
+
 
     <!-- calling cart-->
     <?php

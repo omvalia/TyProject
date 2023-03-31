@@ -111,7 +111,7 @@ if(isset($_GET['edit_products'])){
         </div>
 
         <div class="w-50 m-auto">
-            <input type="submit" name="edit_product" value="Update Product" class="btn btn-info px-3 mb-3">
+            <input type="submit" name="edit_product" value="Update Product" class="admin_btn">
         </div>
     </form>
 </div>

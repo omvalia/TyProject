@@ -27,18 +27,18 @@ include('../functions/common_function.php');
     <div class="user_login_page" style="display: flex;
     justify-content: center; align-items: center; align-content:center;
     flex-direction: column; width: 100%;">
-        <h2 class="text-center user-head" style="margin-bottom: 100px;margin-top: 100px">User Login</h2>
+        <h2 class="text-center user-head" style="margin-bottom: 100px;margin-top: 100px;color:#088178">User Login</h2>
         <div style="width: 40%">
                 <form action="" method="post" >
                     <!--Username-->
                     <div>
-                        <label for="user_username" class="form-label">Username</label>
+                        <label for="user_username">Username</label>
                         <input type="text" class="user_login_field" id="user_username"  placeholder="Enter your username" autocomplete="off" required="required" name=user_username>
                     </div>
                 
                      <!--Password-->
                      <div>
-                        <label for="user_password" class="form-label">Password</label>
+                        <label for="user_password">Password</label>
                         <input type="password" class="user_login_field" id="user_password"  placeholder="Enter your password" autocomplete="off" required="required" name=user_password>
                     </div>
 

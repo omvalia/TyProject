@@ -26,41 +26,34 @@ include('../functions/common_function.php');
     </style>
 </head>
 <body>
-    <div class="container-fluid m-3">
-        <h2 class="text-center mb-5">Admin Registeration</h2>
-        <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 col-xl-5">
-                <img src="../images/apple.jpeg" alt="Admin Registeration" class="img-fluid">
-            </div>
-            <div class="col-lg-6 col-xl-4">
+    <div class="user_regis_page">
+        <h2 class="user_regis_head">Admin Registeration</h2>
                 <form action="" method="post">
-                    <div class="form-outline mb-4">
+                    <div>
                         <label for="username" class="form-label">Username</label><br>
-                        <input type="text" name="admin_name" id="username" placeholder="Enter your username" required="required" class="form-contol">
-                    </div>
-
-                    <div class="form-outline mb-4">
-                        <label for="email" class="form-label">Email</label><br>
-                        <input type="text" name="admin_email" id="email" placeholder="Enter your email" required="required" class="form-contol">
-                    </div>
-
-                    <div class="form-outline mb-4">
-                        <label for="password" class="form-label">Password</label><br>
-                        <input type="password" name="admin_password" id="password" placeholder="Enter your password" required="required" class="form-contol">
-                    </div>
-
-                    <div class="form-outline mb-4">
-                        <label for="confirm_password" class="form-label">Confirm Password</label><br>
-                        <input type="password" name="admin_confirm_password" id="confirm_password" placeholder="Enter your Confirm Password" required="required" class="form-contol">
+                        <input type="text" class="user_regis_field" name="admin_name" id="username" placeholder="Enter your username" required="required" class="form-contol">
                     </div>
 
                     <div>
-                        <input type="submit" name="admin_register" value="Register" class="bg-info py-2 px-3 border-0">
-                        <p class="small fw-bold mt-2 pt-1">Don't you have an account? <a href="admin_login.php" class="link-danger text-decoration-none">Login</a></p>
+                        <label for="email" class="form-label">Email</label><br>
+                        <input type="text" class="user_regis_field" name="admin_email" id="email" placeholder="Enter your email" required="required" class="form-contol">
+                    </div>
+
+                    <div>
+                        <label for="password" class="form-label">Password</label><br>
+                        <input type="password" class="user_regis_field" name="admin_password" id="password" placeholder="Enter your password" required="required" class="form-contol">
+                    </div>
+
+                    <div>
+                        <label for="confirm_password" class="form-label">Confirm Password</label><br>
+                        <input type="password "class="user_regis_field" name="admin_confirm_password" id="confirm_password" placeholder="Enter your Confirm Password" required="required" class="form-contol">
+                    </div>
+
+                    <div>
+                        <input type="submit" name="admin_register" value="Register"  class="user_regis_btn">
+                        <p class="text-center">Don't you have an account? <a href="admin_login.php" class="text-danger text-decoration-none">Login</a></p>
                     </div>
                 </form>
-            </div>
-        </div>
     </div>
 </body>
 </html>

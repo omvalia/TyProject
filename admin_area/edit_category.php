@@ -23,6 +23,6 @@ if(isset($_POST['edit_cat'])){
             <label for="category_title" class="form-label">Category Title</label>
             <input type="text" name="category_title" id="category_title" class="form-control" required="required" value='<?php echo $category_title;?>'>
         </div>
-        <input type="submit" value="Update Category" class="btn btn-info px-3 mb-3" name="edit_cat">
+        <input type="submit" value="Update Category" class="admin_btn" name="edit_cat">
     </form>
 </div>

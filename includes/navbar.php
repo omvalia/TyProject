@@ -7,7 +7,8 @@
     </style>
 </head>
 <body>
-    <section id="header">
+     <!--navbar-->
+     <section id="header">
         <a href="index.php"><img src="./images/logo3.png" alt="logo" class="logo" ></a>
         <div>   
             <ul id="navbar">
@@ -19,7 +20,7 @@
                     echo "<a href='./users_area/user_login.php' id='navbar'>Login</a>";
                 }
                 else{
-                    echo"<li><a href='./users_area/logout.php' id='navbar'>Logout</a></li>";
+                    echo"<a href='./users_area/logout.php' id='navbar'>Logout</a>";
                     echo "<li><a href='./users_area/profile.php' id='navbar'>Account</a></li>";
                 }
                 ?>
